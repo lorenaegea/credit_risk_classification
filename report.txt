@@ -1,0 +1,36 @@
+## Overview of the Analysis
+
+The purpose of this analysis was to develop machine learning models for predicting loan status based on financial information. The data included variables such as loan size, interest rate, borrower income, debt-to-income ratio, number of accounts, derogatory marks, total debt, and loan status. The loan status variable represents whether a loan is considered healthy (0) or high-risk (1). Overall, within the dataset, there were 75036 healthy loans, and 2500 unhealthy ones.
+
+The analysis went through the following stages of the machine learning process:
+
+1. Exploratory Data Analysis: Understanding the distribution and characteristics of the variables.
+2. Data Preprocessing: Splitting the data into training and testing sets.
+3. Model Training: Applying machine learning algorithms to fit a logistic regression model using the training data, and make predictions.
+4. Model Evaluation: Assessing the performance of the trained models using various metrics, such as accuracy, precision, and recall.
+
+During the analysis, resampling techniques, specifically oversampling, were employed to address any class imbalance in the training data. This was done to ensure that the models would not be biased towards predicting the majority class.
+
+## Results
+
+* Machine Learning Model 1:
+  * Balanced Accuracy: 0.99
+  * Precision (Healthy Loan - 0): 1.00
+  * Recall (Healthy Loan - 0): 0.99
+  * Precision (High-Risk Loan - 1): 0.85
+  * Recall (High-Risk Loan - 1): 0.91
+
+* Machine Learning Model 2 (with Resampled Data):
+  * Balanced Accuracy: 0.99
+  * Precision (Healthy Loan - 0): 1.00
+  * Recall (Healthy Loan - 0): 0.99
+  * Precision (High-Risk Loan - 1): 0.84
+  * Recall (High-Risk Loan - 1): 0.99
+
+## Summary
+
+Both Machine Learning Model 1 and Model 2 exhibited excellent performance in predicting loan status. The models achieved high accuracy, precision, and recall scores for both the "0" (healthy loan) and "1" (high-risk loan) labels.
+
+Model 1, trained without resampling, demonstrated slightly higher precision for the "1" label compared to Model 2. However, Model 2, which was trained on resampled data, achieved a higher recall for the "1" label, indicating its ability to correctly identify a larger proportion of actual high-risk loans.
+
+Considering the problem at hand, where correctly identifying high-risk loans is crucial, Model 2 is recommended due to its higher recall score for the "1" label. The higher recall indicates that Model 2 can successfully identify a larger portion of high-risk loans, minimizing the risk of falsely categorizing them as healthy loans, and allowing for more informed lending decisions.
